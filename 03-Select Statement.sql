@@ -1,0 +1,58 @@
+--SELECT STATEMENT 
+--TOP
+--DISTINCT
+--COUNT
+--AS
+--MIN 
+--MAX
+--AVG
+
+
+-- VIEW ALL ROWS AND COLUMNS IN A DATABASE
+SELECT * 
+FROM employees
+
+
+--VIEW TOP 25 ROWS
+SELECT *
+FROM employees
+LIMIT 25
+--  1. TOP Query is not working in PostgreSQL, but limit has been used the same. However, LIMIT query has been used to replicate the same.)
+--  2.In order to execute the same in MySQL and SQL Server the QUery will be : 
+--      SELECT TOP 25 *
+--      FROM employees
+
+
+-- VIEW ALL ROWS WITH DISTINCT FIRSTNAME
+SELECT DISTINCT FirstName
+FROM employees
+
+--COUNTS THE TOTAL NUMBER OF VALUES IN A GIVEN COLUMN
+SELECT COUNT(FirstName)
+FROM employees
+
+
+--SHOWS THE MINIMUM AMOUNT PRESENT IN A COLUMN
+SELECT MIN(SALARY)
+FROM salaries
+
+
+--SHOWS THE MAXIMUM AMOUNT PRESENT IN A COLUMN
+SELECT MAX(SALARY)
+FROM salaries
+
+
+--SHOWS THE AVERAGE AMOUNT PRESENT IN A COLUMN
+SELECT AVG(SALARY)
+FROM salaries
+
+
+--TO RENAME A COLUMN OR TO GIVE IT AN ALIAS
+SELECT AVG(SALARY) AS AVG_SALARY
+FROM salaries
+
+
+
+--TO COUNT the NUMBER OF DISTINCT VALUES IN A COLUMN , WE DO 
+SELECT COUNT(DISTINCT(LastName))
+FROM employees
